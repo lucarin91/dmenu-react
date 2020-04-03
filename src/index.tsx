@@ -22,8 +22,6 @@ interface DmenuState {
 }
 
 // based on: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav
-// TODO: implement the responsive part
-
 export class DMenu extends React.Component<DmenuProps, DmenuState> {
   inputRef: HTMLInputElement;
 
@@ -66,19 +64,24 @@ export class DMenu extends React.Component<DmenuProps, DmenuState> {
   }
 
   handleInput(event: React.ChangeEvent<HTMLInputElement>) {
-    this.setState({ input: event.target.value, selected: 0, filteredMenu: this.getfilterMenu(event.target.value) })
+    console.log("input", event.target.value)
+    let value = event.target.value
+    if (value !== "") {
+      this.setState({ input: value, selected: 0, filteredMenu: this.getfilterMenu(event.target.value) })
+    } else {
+      this.setState(state => ({ input: value, selected: 0, filteredMenu: state.menu }))
+    }
   }
 
   handleKeyDown(event: KeyboardEvent) {
-    if (event.key == "ArrowRight" && this.state.selected < this.state.filteredMenu.length - 1) {
-      this.setState({ selected: this.state.selected + 1 })
-      event.preventDefault();
-    } else if (event.key == "ArrowLeft" && this.state.selected > 0) {
-      this.setState({ selected: this.state.selected - 1 })
-      event.preventDefault();
-    }
+    console.log("key", event.key)
     if (event.key == "ArrowRight" || event.key == "ArrowLeft") {
       event.preventDefault();
+    }
+    if (event.key == "ArrowRight" && this.state.selected < this.state.filteredMenu.length - 1) {
+      this.setState({ selected: this.state.selected + 1 })
+    } else if (event.key == "ArrowLeft" && this.state.selected > 0) {
+      this.setState({ selected: this.state.selected - 1 })
     }
   }
 

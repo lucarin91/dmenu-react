@@ -6,35 +6,39 @@ import 'dmenu-react/dist/index.css'
 const App = () => {
   let menu = [
     {
-      name: "Home",
+      name: "~/",
       url: ""
     },
     {
-      name: "Education",
+      name: "~/education",
       url: "#education"
     },
     {
-      name: "Experience",
+      name: "~/experience",
       url: "#experience"
     },
     {
-      name: "Skills",
-      url: "#skills"
-    },
-    {
-      name: "Projects",
+      name: "~/projects",
       url: "#projects"
     },
     {
-      name: "Research",
+      name: "~/skills",
+      url: "#skills"
+    },
+    {
+      name: "~/research",
       url: "#research"
     },
     {
-      name: "Contacts",
+      name: "~/contacts",
       url: "#contacts"
     }
   ];
-  return <DMenu menu={menu} active={getActive(menu)} />
+  return <div><DMenu menu={menu} active={getActive(menu)} />
+    <div>
+      <p>Some content of the site</p>
+    </div>
+  </div>
 }
 
 function getActive(menu) {

@@ -1,43 +1,39 @@
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
 .topnav {
+  margin: 0;
+  font-family: 'Fira Mono', monospace;
   overflow: hidden;
   background-color: #333;
+  height: 1.7em;
 }
 
-.topnav a {
+.topnav a, .topnav input {
   float: left;
   display: block;
   color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  padding: .1em .6em;
   font-size: 17px;
+}
+
+.topnav a {
+  text-align: center;
+  text-decoration: none;
 }
 
 .topnav input {
-  float: left;
-  display: block;
-  color: white;
   text-align: left;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
   background-color: #333;
   border: none;
+  width: 8em;
 }
 
 .topnav a.active {
-  background-color: #4CAF50;
-  color: white;
-  border-bottom: 5px solid #4CAF50;
+  background-color: #808880;
+  border-bottom: .2em solid #808880;
 }
 
 .topnav a.selected, .topnav a:hover {
-  border-bottom: 5px solid #ddd;
+  border-bottom: .2em solid #ddd;
 }
 
 .topnav .icon {
@@ -56,7 +52,6 @@ body {
     float: right;
     display: block;
   }
-
   .topnav .input {
     display: none;
   }
@@ -65,6 +60,7 @@ body {
 @media screen and (max-width: 915px) {
   .topnav.responsive {
     position: relative;
+    height: 100%;
   }
   .topnav.responsive .icon {
     position: absolute;
