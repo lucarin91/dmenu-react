@@ -1,18 +1,18 @@
 # dmenu-react
 
-> Made with create-react-library
-
-[![NPM](https://img.shields.io/npm/v/dmenu-react.svg)](https://www.npmjs.com/package/dmenu-react) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+<!--[![NPM](https://img.shields.io/npm/v/dmenu-react.svg)](https://www.npmjs.com/package/dmenu-react) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)-->
 
 A [dmenu](https://tools.suckless.org/dmenu/) like navbar component written in React.
 
-![example](./dmenu_example.png)
+![example](./data/dmenu-react-demo.gif)
 
-## Install
+> Made with create-react-library
+
+<!-- ## Install
 
 ```bash
 npm install --save dmenu-react
-```
+``` -->
 
 ## Usage
 
