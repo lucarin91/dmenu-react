@@ -34,10 +34,8 @@ const App = () => {
       url: "#contacts"
     }
   ];
-  return <div><DMenu menu={menu} active={getActive(menu)} />
-    <div>
-      <p>Some content of the site</p>
-    </div>
+  return <div>
+    <DMenu menu={menu} active={getActive(menu)} />
   </div>
 }
 
